@@ -1,10 +1,10 @@
-{{#-in-element this.dynamicComponentsDetachedElement}}
+{{#in-element this.dynamicComponentsDetachedElement}}
   {{#each this.templates.components as |components|}}
     <span {{did-insert components.didInsert}}>
       123
     </span>
   {{/each}}
-{{/-in-element}}
+{{/in-element}}
 
 {{#each this.numbers}}
   <Foo @foo={{foo-helper}}/>
