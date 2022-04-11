@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{#in-element this.dynamicComponentsDetachedElement}}
+  {{#each this.templates.components as |components|}}
+    <span {{did-insert components.didInsert}}>
+      123
+    </span>
+  {{/each}}
+{{/in-element}}
 
-{{outlet}}
+{{#each this.numbers}}
+  <Foo @foo={{(foo-helper)}}/>
+{{/each}}
